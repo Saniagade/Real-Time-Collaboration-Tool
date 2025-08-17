@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>REAL-TIME COLLABORATION </title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- CodeMirror CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css"/>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">REAL-TIME COLLABORATION</div>
+    <div class="controls">
+      <span id="myName">Not joined</span>
+      <button id="changeName">Change Name</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="left">
+      <div class="status">
+        <div id="typingStatus" class="typing"></div>
+        <div class="users-title">Users Online</div>
+        <ul id="usersList"></ul>
+      </div>
+    </div>
+
+    <div class="editor-wrap">
+      <textarea id="code"></textarea>
+    </div>
+  </div>
+
+  <!-- Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- CodeMirror -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+  <!-- Client logic -->
+  <script src="client.js"></script>
+</body>
+</html>
